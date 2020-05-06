@@ -48,7 +48,8 @@ public class TimeUtilsTest {
      * Test of secToTime method, of class TimeUtils.
      */
     @ParameterizedTest
-    @CsvSource({"1, '0:00:01'", "3, '0:00:03'", "-3, '-1'", "3665, '1:01:05'", "86395, '23:59:55'", "86400, '0:00:00"}) 
+    @CsvSource({"1, '0:00:01'", "3, '0:00:03'", "-3, '-1'", "3665, '1:01:05'", 
+        "86395, '23:59:55'", "86400, '0:00:00"}) 
     public void testSecToTime(int input, String expected) {
         String result = TimeUtils.secToTime(input);
         assertEquals(expected, result);
